@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Living - Student Dormitories</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1173d4',
+                        'background-light': '#f6f7f8',
+                        'background-dark': '#101922',
+                    },
+                    fontFamily: {
+                        display: ['Manrope'],
+                    },
+                    borderRadius: {
+                        DEFAULT: '0.25rem',
+                        lg: '0.5rem',
+                        xl: '0.75rem',
+                        full: '9999px',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .form-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+            appearance: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+            <div class="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+                <div class="flex items-center gap-3 text-gray-900 dark:text-white">
+                    <div class="w-8 h-8 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_6_319)">
+                                <path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_6_319">
+                                    <rect fill="white" height="48" width="48"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold">Campus Living</h2>
+                </div>
+                
+                <div class="flex flex-1 justify-end items-center gap-6">
+                    <nav class="hidden md:flex items-center gap-6">
+                        <a class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#home">Home</a>
+                        <a class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#rooms">Rooms</a>
+                        <a class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#gallery">Gallery</a>
+                        <a class="text-sm font-medium text-primary dark:text-primary" href="#contact">Contact</a>
+                    </nav>
+                    
+                    <div class="flex items-center gap-4">
+                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-wide hover:bg-primary/90 transition-colors">
+                            <span class="truncate">Login</span>
+                        </button>
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYb4oi4aNFUOJ05mq9UVKuZDYG8rDATdAYgI-UZ9oULoOQBSAVUWCORSKyOU5_RJIupGsSiVq2zl6DI8tWELo8fE6g2WcjZdMpTO-4AjU7gau6TqJUhl_e9oGT5g9NV2j9OkJMyA4B0_4pbOE2lkVH59wksr3fybNSszz3M_yksiAW8SMcmu2f-N0qumrORAcjhOTmuoHs6ooMuWw7ZEDxZ9HcpE-l9rG_5qggthp51NbX2ZtfzXNTEwC9_7VKsqAauOV547J_tIKs");'></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="relative">
+                <div class="absolute inset-0 bg-black/40"></div>
+                <div class="relative min-h-[500px] flex items-center justify-center bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBx8hYdJQej2c6qsvWv6Za__g5p6aitPbk4bn3TIPp84bDba3MFRW1GtLzZgI_DQrIFRxsjxv4eweS29OJOmoynzt7FkjEvIeBZKhOJKC6H6fl0bMCXvsWUGNs7xmI7EjmgYKwa7VtmMO1l2KUjT4F5sMoINVgcLENFCHJVa630AV58vYE50GleyBsQHfQoZlw8BUof9gpeYnscQxFok5SfyudfZ92mL3luvX1iSHXRujK7CSgMYbypItzqi4GkvLwSq-m7n_f-tM62");'>
+                    <div class="text-center text-white p-4 z-10 flex flex-col items-center gap-6">
+                        <div class="flex flex-col gap-2">
+                            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Welcome to Campus Living</h1>
+                            <p class="text-lg md:text-xl max-w-2xl mx-auto">Your home away from home. Explore our comfortable and convenient dormitory options.</p>
+                        </div>
+                        <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold shadow-lg hover:bg-primary/90 transition-colors">
+                            <span class="truncate">Book a Room</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Overview Section -->
+            <section class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Dormitory Overview</h2>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Our dormitory offers a vibrant and supportive community for students. With modern amenities, spacious rooms, and a prime location, it's the perfect place to live and learn. We prioritize student well-being and academic success, providing a safe and inclusive environment.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Highlights Section -->
+            <section class="bg-background-light dark:bg-background-dark py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Highlights</h2>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="flex flex-col gap-4 bg-white dark:bg-gray-800/20 rounded-xl overflow-hidden shadow-sm transition-shadow hover:shadow-lg">
+                            <div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoVXdepeG5Bz0f9oFuouqq22EUThOIVP_-1yJZmIU2pdW6V1doQ8hS3ax4_4uyAOQLFUdyS2ycwJFjYdCLHGMAu-N11vzr4f47nys5L-w1DCdDoe9tIWZkVU0HZik_wHo90k4lNWzEvPZaB1d7MdJubUU7v7u1wDaSNipqGEliiR8tiCbL6SrPUWFqg61pkUu9cuttd9FD8Rb-rBnxV0Aw5Bu_qSUeUhGCOTmIp4XVT4GM-eo6QJ0Tz1vNfaffBhwZhoKyqEPOUTQK");'></div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Modern Rooms</h3>
+                                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Comfortable and well-equipped rooms for a productive study environment.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 bg-white dark:bg-gray-800/20 rounded-xl overflow-hidden shadow-sm transition-shadow hover:shadow-lg">
+                            <div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoGpXGELS4-ojlefhsUqw8WXFTOvc4RV6mYGi2lqjJOfzbkgAiyarClXLCOvRUK_Cjb-OH9h_0fJQBJtsAq_v52icJUmn_y6IEH9_5yJ2m3Bw0WF5hurEfNzkI_JvIJPo4H2sD5C9c-ZRKCRhl1wMapKpudY2bcaHpTA-MKm8uM_0JRMikastEZZtJbzaEAzkAiHDUH5P-nVOfhQcEzfelFeKfdArzn0L4UEM0UW7RhHlnnTEcua2OSdUC431VgFR2ZpXv47O7AdL9");'></div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Study Lounges</h3>
+                                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Quiet and collaborative spaces for group projects and individual study.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 bg-white dark:bg-gray-800/20 rounded-xl overflow-hidden shadow-sm transition-shadow hover:shadow-lg">
+                            <div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmU7HQxTekNK-LIrCzmc2lx_OQF-dL7QGMZtBQTdniYN3n6aTPGcnZr6bsseD5cq6KPrPp9gt-nsAsgnNNyd5NTQKQIvnvI2vpxR8GPUk9rxOtrDRDk1bmQMpnNtpDQr3QSDyBeMpr08SUo2IqPWk6EndPdkgKGjrnkPyO8bdtHNa0aqN2DgLCQpgS86wxeLPSGhP0MlaXx9GmeZWR23wU7uPziKGcNQzzl9UuYYWjBRY5_7QJ9goimK6PinHWAAyRrdGJ7ZruHC4v");'></div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Recreational Areas</h3>
+                                <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Areas for relaxation and socializing, including game rooms and outdoor spaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Room Types Section -->
+            <section id="rooms" class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-background-light dark:bg-background-dark">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Available Room Types</h2>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Explore our diverse range of room options to find the perfect fit for your academic journey.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="flex flex-col rounded-lg overflow-hidden bg-white dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7h1S4qAOyGxuvMy3SaZIWRsHoxRPvDrkxesKQ8es5iI-_uyrmGCha_W5lWKksRF1AtZZ82Mgd8fZygtaq6j5WBQuoNy2Oe_-9iNWY4Lg24yfvqOCzIjDareq9imVzLiS6MpqrgHhmlc1bzTF14-Jo4hFC8wAINQ_yPNrgGmhNma0PRX9H49x0mDtZmhvUhIS1jGxACAVXZA0dcTOzZSV4AWIt4UQ4WkUw3T2KLTT_jcuTJILId-jldfsyqlgBoVOEop25yY8e7dIh");'></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h4 class="text-lg font-bold text-gray-900 dark:text-white">Single Room</h4>
+                                <p class="text-primary font-semibold mt-1">$1200/semester</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-grow">Spacious room with a private bathroom and study area. Ideal for students who value privacy and comfort.</p>
+                                <button class="mt-4 w-full text-center rounded-lg px-4 py-2 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">View Details</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col rounded-lg overflow-hidden bg-white dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDb1tanZfQ92e9G7WG-o-xCTK22a5bJD0ZJlRKgTiZEOF5ipsKCdJAmk28vvW8qTZmCwgU_UP3anGRqY7ePnktxvs-tE9RLgRnlM42PzlVtxP_EwFKcLjRPJS6UteQ6K4Xkalou-MzPTuYyXJnT-XD6vKuShxx65Rjfo7p3ss-Ocg7vZRNucyjsvKWuO2Y5i_JHtud5iDi-aE7JvQHBXST8Vz50HOgGoVwQERm11O5YJ_q9ESyJo9VHm048f3_E84kC-gVHwWoo2Dcu");'></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h4 class="text-lg font-bold text-gray-900 dark:text-white">Double Room</h4>
+                                <p class="text-primary font-semibold mt-1">$800/semester</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-grow">Shared room with two beds, desks, and a common area. Perfect for students who enjoy socializing and collaborative study.</p>
+                                <button class="mt-4 w-full text-center rounded-lg px-4 py-2 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">View Details</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col rounded-lg overflow-hidden bg-white dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzKYIVkWxhQE-y9Xkms11BaQfpJPzvW5B-e1jtWeuw7ka1ByNBpdXtLlUch3QuKgsdiBWi3qsePnEpDPnXV3czD0HxhunevpyJ67BLD9jzX27pXQ1F_uPr7b3bXez2qkYOsCoBykT0NUw_pUHqty0AAe3pMHDIJCBybbPstwACRiXYF-s1n_vGPelVQWqUyJP8hROIrHqjvF5pj_PKZq9a8DDicPeyIZ7XyziujS2JwSae4QAgSTDuciVv2QteCIGCAuSxeR_1_0oj");'></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h4 class="text-lg font-bold text-gray-900 dark:text-white">Suite</h4>
+                                <p class="text-primary font-semibold mt-1">$1800/semester</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-grow">Suite with a private bedroom, living area, and kitchenette. Suitable for students seeking a more independent living experience.</p>
+                                <button class="mt-4 w-full text-center rounded-lg px-4 py-2 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">View Details</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col rounded-lg overflow-hidden bg-white dark:bg-background-dark shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKbM8tRTGV7-69aYXTFtxxmT_VDTjLi_4YoLOlqNR40oBazlU06nsj_NIjYtovH1lhQvlS-93XwxeJ53x2wKJuI0R-cKTwQihZsj7VxFd5d1buqtWF-lspBeUFsS0a75xp_dqi6HhyQ1-4fl-deqqP6jVH3zyk6phmvpbqAImNKQR2fTVOFYndcWG59hrRY6VmlWx3zNBfn4Bi9Q8HnV18lbRQ8grHFiqH4UC8aw99Bq-ydumdfw18m9qrQWwUWlSYwI4wA_yvUkRK");'></div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h4 class="text-lg font-bold text-gray-900 dark:text-white">Economy Room</h4>
+                                <p class="text-primary font-semibold mt-1">$600/semester</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-grow">Economy room with basic amenities and shared bathroom facilities. A budget-friendly option for students.</p>
+                                <button class="mt-4 w-full text-center rounded-lg px-4 py-2 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Photo Gallery</h2>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                            Explore our vibrant campus living spaces through high-quality photos. Get a feel for the rooms, common areas, and amenities that make our community special.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                        <div class="group relative block overflow-hidden rounded-lg">
+                            <div class="h-48 w-full transform bg-cover bg-center transition duration-300 ease-in-out group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1IR0VwJGpa3-aoufmcBsby_51FXCwsXh9i-Zk4I47ricPRrEECwggJBdzYt4wK25KAKliXxHAqk_2mtx8nvvzT0Nc-uQP7blTSMRM52sPJ0JaKGAkDbrZbJG_j49Nq3Xf4PE-U4MJn05vS8ZxPJUNOHFfwWbbco7q7zKTlKiZ42bY9mZiBSL04xvAT4-qUL1UitGdDbahLikmqWYy6fETtD2ptVYVFd79l8gY5y9iX2xG9c2Z_9QOYhgT4H4GNlkuiX59Iuey8WNu");'></div>
+                        </div>
+                        <div class="group relative block overflow-hidden rounded-lg">
+                            <div class="h-48 w-full transform bg-cover bg-center transition duration-300 ease-in-out group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAvvXTP4WAdx_30mI9dbEN5JfW6sOF9bv4Z4TNCRx-9rWRRpVSWbgGjlKQ9FOeCLlCsxLh6SW_ipUaHzyR8v6WsW2WGO551b6Qvwb8SPG0wfNbNzzEWb5Rv4Tkp6M3laUiMnT1rbW_kMxV-R-d-TfzuEr3GQRvhApvRhLTjYYTixSmdxyp-mal08cj5UcFmpGvMrNfHH2vrQV-tM1Wfsa1G81tshrad38wUSQlBxpGZv62SHPRdycJzZcy1FkwofDLE92aJhLVdb8gm");'></div>
+                        </div>
+                        <div class="group relative block overflow-hidden rounded-lg">
+                            <div class="h-48 w-full transform bg-cover bg-center transition duration-300 ease-in-out group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZEwClEXgj1JP4S5xuWQdEWPskQ2QnUtF2kBiwpVJLGfVGtwj3r0J2LKCe-rSZwl8N_urIuZXrUfQokT7hytK5LDBAdlRqrmI1rBVZ-yOpRbQwKnkjdLTSIQDj9KfN4yUTAToD1QoFlZrra97aFqiWP__oM3mVYeu49lHjGqGaZFerAWfkXF8D__ZCSB_3LSZ19oD86QIAPtz7KklkrscignbBavc3bPkWxXDBYkeRW279r7kClj8u4A5ye9fHjvyvFBXUBez5zItY");'></div>
+                        </div>
+                        <div class="group relative block overflow-hidden rounded-lg">
+                            <div class="h-48 w-full transform bg-cover bg-center transition duration-300 ease-in-out group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACjaf5NTcPemcp8ISOG001dOJUiV8l-2oN6wcJLQUrdzsH4bw8nEg-T6zSzKBN67X3ln60nZzmbM9ckeC8YCv9nTQS3Z-Axc89LU1sOXzGwyb_HZYl5BE60OK_hkib3BuGqGRs6UrjSWVHmp_0uytjdGpap4Aaz4jDxuueOd5eEZBOrR7R49SfI4O-p2zcQWFfk1ZH0uEfdtaqC_R2AA3bvv9o_1YKVlviPwH6alUWd9CzGrzS_HOwEOm1b1xedh0Lp5daeZKDX3W5");'></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="bg-background-light dark:bg-background-dark py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Contact Us</h2>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Have questions or need assistance? Reach out to our friendly staff.</p>
+                    </div>
+                    
+                    <div class="mt-12 bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+                        <form action="#" class="space-y-6" method="POST">
+                            <div class="grid grid-cols-1 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="name">Your Name</label>
+                                    <input class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="name" name="name" placeholder="Your Name" required type="text"/>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="email">Your Email</label>
+                                    <input autocomplete="email" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="email" name="email" placeholder="Your Email" required type="email"/>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="category">Category</label>
+                                    <select class="form-select w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="category" name="category">
+                                        <option disabled selected>Select an inquiry category</option>
+                                        <option>Maintenance Request</option>
+                                        <option>Room Change Request</option>
+                                        <option>General Inquiry</option>
+                                        <option>Feedback</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="message">Your Message</label>
+                                    <textarea class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary bg-white dark:bg-gray-800 text-gray-900 dark:text-white" id="message" name="message" placeholder="Your Message" required rows="4"></textarea>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="w-full py-3 px-4 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary transition-colors" type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                            <p class="text-center text-sm text-gray-500 dark:text-gray-400">Estimated response time: 2-3 business days</p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Campus Living</h3>
+                    <p class="text-gray-400">Providing comfortable and affordable housing for students since 2005.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="#home">Home</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="#rooms">Room Types</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="#gallery">Gallery</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <p class="text-gray-400">123 University Avenue</p>
+                    <p class="text-gray-400">Campus Town, CT 12345</p>
+                    <p class="text-gray-400">info@campusliving.example</p>
+                    <p class="text-gray-400">(555) 123-4567</p>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2023 Campus Living. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple dark mode toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for saved theme preference or respect OS setting
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>
